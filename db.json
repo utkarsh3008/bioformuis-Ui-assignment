@@ -1,0 +1,80 @@
+{
+  "domainList": [
+    {
+      "id": 1,
+      "domain": "firstdomain.com",
+      "storage": "100gb",
+      "usedStorage": "70gb",
+      "domainTag": "Primary",
+      "availableDomains": 10,
+      "usedDomains": 4,
+      "monthlyVisitorCapacity": 10000,
+      "monthlyVisitor": 100,
+      "status": "Active",
+      "subdomain": [
+        {
+          "id": 11,
+          "name": "abc.xyz.com",
+          "usedStorage": "10gb",
+          "domainTag": "Staging",
+          "monthlyVisitor": 700,
+          "status": "Inactive"
+        },
+        {
+          "id": 12,
+          "name": "adef.xyz.com",
+          "usedStorage": "40gb",
+          "domainTag": "Add On",
+          "monthlyVisitor": 1100,
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "domain": "seconddomain.com",
+      "storage": "100gb",
+      "usedStorage": "50gb",
+      "domainTag": "Primary",
+      "status": "Inactive",
+      "availableDomains": 10,
+      "usedDomains": 1,
+      "monthlyVisitorCapacity": 10000,
+      "monthlyVisitor": 2000,
+      "subdomain": []
+    },
+    {
+      "id": 3,
+      "domain": "thirddomain.com",
+      "storage": "100gb",
+      "usedStorage": "50gb",
+      "domainTag": "Primary",
+      "status": "Inactive",
+      "availableDomains": 10,
+      "usedDomains": 1,
+      "monthlyVisitorCapacity": 10000,
+      "monthlyVisitor": 2000,
+      "subdomain": []
+    },
+    {
+      "id": 4,
+      "domain": "fourthdomain.com",
+      "storage": "100gb",
+      "usedStorage": "50gb",
+      "domainTag": "Primary",
+      "status": "Inactive",
+      "availableDomains": 10,
+      "usedDomains": 1,
+      "monthlyVisitorCapacity": 10000,
+      "monthlyVisitor": 100,
+      "subdomain": []
+    },
+    {
+      "domain": "df",
+      "storage": "dfs",
+      "usedStorage": "fdf",
+      "monthlyVisitor": 5,
+      "id": 5
+    }
+  ]
+}

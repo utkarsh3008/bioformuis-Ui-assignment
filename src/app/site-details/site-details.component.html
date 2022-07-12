@@ -1,0 +1,70 @@
+<app-add-domain #modal></app-add-domain>
+<div class="main-container">
+  <aside class="sidebar">
+    <app-sidebar></app-sidebar>
+  </aside>
+  <main class="content">
+    <div class="inner_text">
+      <div>
+        <span class="site-text">Site Details</span>
+        <button (click)="openModal()" class="add-btn">+ Add New Site</button>
+      </div>
+      <div class="data-details">
+        <label for="show">Show</label>
+        <input type="number" value="10">
+        <label for="Entries">Entries</label>
+        <i aria-hidden="true" class="fa fa-search"></i>
+        <input (change)="searchDomain($event)" class="record" placeholder="Search records" type="text"
+               value={{searchKey}}/>
+      </div>
+      <div class="data-desc">
+        <div>
+          <ul class="main-heading">
+            <li>Domain & Plan Name</li>
+            <li>Storage</li>
+            <li>Monthly Visitor</li>
+            <li>Domains</li>
+            <li>Status</li>
+          </ul>
+
+          <ul *ngFor="let data of domainList" class="full-content">
+            <li>
+              <ul [ngClass]="{'active' : data.subdomain}" class="main-data">
+                <li><span class="domain-name">{{data.domain}}</span><br>
+                </li>
+                <li class="progress">
+                  <progress max="{{data.storage.replace('gb', '')}}"
+                            value="{{data.usedStorage.replace('gb', '')}}"></progress>
+                  <br>
+                  <span class="storage-data"> {{data.usedStorage}} of {{data.storage}} </span>
+                </li>
+                <li class="progress">
+                  <progress max="{{data.monthlyVisitorCapacity}}" value="{{data.monthlyVisitor}}"></progress>
+                  <br>
+                  <span class="storage-data"> {{data.monthlyVisitor}} of {{data.monthlyVisitorCapacity}} </span>
+                </li>
+                <li>
+                  <div class="box" style="--p:({{data.usedDomains}}/ {{data.availableDomains}}) * 100">
+                    <span class="domains-tag"> {{data.usedDomains}}/ {{data.availableDomains}} </span>
+                  </div>
+                </li>
+                <li><span
+                  [ngClass]="data.status === 'Active' ? 'statusActive' : 'statusInactive'">{{data.status}}</span></li>
+              </ul>
+            </li>
+            <li *ngIf="data.subdomain" class="subdomain">
+              <ul *ngFor="let d of data.subdomain" class="main-data">
+                <li>{{d.name}}</li>
+                <li>{{d.usedStorage}}<span class="color-data"></span></li>
+                <li>{{d.monthlyVisitor}}<span class="color-data"></span></li>
+                <li><span class="domainTag">{{d.domainTag}}</span></li>
+                <li><span [ngClass]="d.status === 'Active' ? 'statusActive' : 'statusInactive'">{{d?.status}}</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

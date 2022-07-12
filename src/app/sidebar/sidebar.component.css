@@ -1,0 +1,57 @@
+.sidebar {
+  min-width: 200px;
+  background-color: #5B7CFD;
+  /*display: flex;*/
+}
+.inner_text {
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  top: 20%;
+  position: relative;
+}
+img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.profile-img{
+  /*display: flex;*/
+  display: block;
+  text-align: center;
+}
+.profile-desc{
+  display: grid;
+  margin-top: 10px;
+}
+
+.profile-desc .profile-name{
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+}
+
+.profile-desc .profile-mail{
+  font-size: 10px;
+  color: lightgrey;
+}
+
+.profile-details ul{
+  list-style: none;
+  display: initial;
+}
+
+li.menu-item{
+  font-size: 14px;
+  color: lightgrey;
+}
+
+li.menu-item:not(:last-child){
+  margin-bottom: 25px;
+}
+
+li.menu-item.active {
+  color: #ffffff;
+  font-weight: bold;
+}

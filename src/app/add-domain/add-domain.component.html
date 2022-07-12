@@ -1,0 +1,35 @@
+<div #myModal class="container">
+  <div class="content">
+    <h4>Add Domain Details</h4>
+    <div class="row">
+      <form (ngSubmit)="form.valid && onSubmit()" [formGroup]="form" name="form">
+        <div class="first-row">
+          <div class="form-group">
+            <label for="domain">Domain Name</label><br>
+            <input class="form-control" formControlName="domain" required type="text"/>
+          </div>
+          <div class="form-group">
+            <label for="storage">Storage</label><br>
+            <input class="form-control" formControlName="storage" required type="text"/>
+
+          </div>
+        </div>
+        <div class="second-row">
+          <div class="form-group">
+            <label for="usedStorage">Used Storage</label><br>
+            <input class="form-control" formControlName="usedStorage" type="text"/>
+          </div>
+          <div class="form-group">
+            <label for="monthlyVisitor">Monthly Visitor</label><br>
+            <input class="form-control" formControlName="monthlyVisitor" type="number"/>
+          </div>
+        </div>
+        <div class="form-group action-btn">
+          <button (click)="close()" class="close-btn">Close</button>
+          <button [disabled]="!form.valid" class="save-button">Save Changes</button>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
